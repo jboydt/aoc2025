@@ -49,7 +49,7 @@ fn contains_illegal_pattern_two(pattern: i64) -> bool {
                 break;
             }
         }
-        if rest.len() == 0 {
+        if rest.is_empty() {
             return true;
         }
         take += 1;
@@ -72,7 +72,7 @@ fn contains_illegal_pattern_one(pattern: i64) -> bool {
     let pattern_str = pattern.to_string();
     let mut take = 1;
     while take < (pattern_str.len() / 2) + 1 {
-        if pattern_str[0..take].to_string() == pattern_str[take..] {
+        if pattern_str[0..take] == pattern_str[take..] {
             return true;
         }
         take += 1;

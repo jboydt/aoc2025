@@ -14,6 +14,5 @@ pub fn load_input(filename: &str) -> io::Result<Vec<String>> {
 
 fn build_input_path(target: &str) -> PathBuf {
     let manifest_dir = env!("CARGO_MANIFEST_DIR");
-    let path = [manifest_dir, INPUT_ROOT, target].iter().collect();
-    path
+    [manifest_dir, INPUT_ROOT, target].iter().collect()
 }
