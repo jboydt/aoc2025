@@ -32,6 +32,7 @@ fn process(day: u8, lines: &Vec<String>) {
     match day {
         1 => (solution_one, solution_two) = one::solve(lines),
         2 => (solution_one, solution_two) = two::solve(lines),
+        3 => (solution_one, solution_two) = three::solve(lines),
         _ => println!("No solution for day {}\n", day),
     }
 
